@@ -146,6 +146,16 @@ img {
 .current {
   color: var(--accent-color);
 }
+.current::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  width: 100px;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
 .icon-mail,
 .icon-tell {
   margin-right: 10px;
