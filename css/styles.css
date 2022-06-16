@@ -413,7 +413,8 @@ li > .all {
   position: absolute;
   left: 0;
   bottom: 0;
-  color: var(--main-title-color);
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
 }
 .image-name-desktop {
   display: flex;
