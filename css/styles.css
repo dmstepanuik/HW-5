@@ -301,6 +301,24 @@ li > .all {
   margin-left: 30px;
   margin-bottom: 30px;
 }
+.portfolio-top-wrap {
+  position: relative;
+}
+
+.box-overlay {
+  position: absolute;
+  background: rgba(33, 150, 243, 0.9);
+  padding: 40px;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.porfolio-top-text {
+  font-size: 16px;
+  color: var(--main-title-color);
+  line-height: 1.6;
+}
 .portfolio-project {
   border-bottom: 1px solid var(--fifth-title-color);
   border-left: 1px solid var(--fifth-title-color);
@@ -392,6 +410,9 @@ li > .all {
   margin-bottom: 50px;
 }
 
+.about-item {
+  position: relative;
+}
 .about-item:first-child {
   margin-right: 30px;
 }
@@ -405,31 +426,23 @@ li > .all {
   display: flex;
 }
 /* ------------ANIMATION------------ */
-.thumb {
-  position: relative;
-}
 
-.thumb > .image-name {
+.image-name-desktop {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
+  width: 100%;
   left: 0;
   bottom: 0;
-  color: #ffffff;
+  height: 70px;
+  color: var(--btn-color);
   background: rgba(47, 48, 58, 0.8);
-}
-.image-name-desktop {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.image-name-mobile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.image-name-design {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* ---------------TEAM--------------- */
