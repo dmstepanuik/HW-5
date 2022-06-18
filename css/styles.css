@@ -710,7 +710,7 @@ li > .all {
   transition: opacity 300ms linear, visibility 300ms linear;
 }
 
-.backdrop.is-hidden.modal {
+.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0) rotate(-360deg);
 }
 
