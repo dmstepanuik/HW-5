@@ -9,7 +9,7 @@
   --fifth-title-color: #eee;
   --btn-soc: #afb1b8;
   --btn-hover: #188ce8;
-  --timing-function: 2250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 p,
@@ -113,7 +113,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--second-title-color);
 } */
-.link {
+.nav-link {
   font-weight: 500;
   display: block;
   padding: 32px 0;
@@ -145,8 +145,8 @@ img {
   transition: opacity var(--timing-function);
 }
 
-.link:hover,
-.link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent-color);
 }
 .current {
@@ -165,6 +165,13 @@ img {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
+}
+.header-contact-link {
+  transition: color var(--timing-function);
+}
+.header-contact-link:hover,
+.header-contact-link:focus {
+  color: var(--accent-color);
 }
 
 .icon-mail,
@@ -227,18 +234,18 @@ img {
   width: 696px;
 }
 .hero-btn {
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   border-radius: 4px;
   border: none;
   padding: 10px 32px;
   min-width: 200px;
   margin: 0 auto;
   display: block;
-  transition: opacity var(--timing-function);
+  transition: background-color var(--timing-function);
 }
 .hero-btn:focus,
 .hero-btn:hover {
-  background: var(--btn-hover);
+  background-color: var(--btn-hover);
 }
 .work-list {
   display: flex;
@@ -265,7 +272,8 @@ li > .all {
   border-radius: 4px;
   border: none;
   cursor: pointer;
-  transition: opacity var(--timing-function);
+  transition: background-color var(--timing-function), box-shadow var(--timing-function),
+    color var(--timing-function);
 }
 
 .work-btn:hover,
@@ -298,7 +306,6 @@ li > .all {
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--btn-color);
-  transition: opacity var(--timing-function);
 }
 
 /* portfolio projects */
@@ -558,10 +565,11 @@ li > .all {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: opacity var(--timing-function);
+  transition: background-color var(--timing-function);
 }
 .team-soc-icon {
   fill: var(--btn-soc);
+  transition: fill var(--timing-function);
 }
 .team-soc-link:hover,
 .team-soc-link:focus {
@@ -631,6 +639,9 @@ li > .all {
 .adress-box {
   margin-right: 70px;
 }
+.contacts {
+  font-style: normal;
+}
 .footer-title {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -656,9 +667,7 @@ li > .all {
 .contacts-item {
   list-style: none;
   text-decoration: none;
-  font-weight: 400;
   font-size: 14px;
-  font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
