@@ -612,18 +612,17 @@ li > .all {
   border: 1px solid var(--btn-soc);
   border-radius: 4px;
   padding: 16px 32px;
+  transition: color var(--timing-function);
+  border-color: var(--timing-function);
 }
 .clients-icon {
   fill: currentColor;
 }
 
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
-  fill: currentColor;
-}
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--accent-color);
+  color: var(--timing-function);
 }
 
 /* -------------FOOTER----------------- */
@@ -671,6 +670,7 @@ li > .all {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
+  transition: opasity var(--timing-function);
 }
 
 .contacts-item:not(:last-child) {
@@ -684,6 +684,7 @@ li > .all {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color var(--timing-function);
 }
 .footer-soc-list {
   display: flex;
@@ -712,10 +713,12 @@ li > .all {
   height: 44px;
   margin-right: 10px;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: opacity var(--timing-function);
+  transition: background-color var(--timing-function);
 }
+
 .footer-soc-icon {
   fill: var(--btn-color);
+  transition: fill var(--timing-function);
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
