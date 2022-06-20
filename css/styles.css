@@ -56,6 +56,11 @@ img {
 
 /* ----------------HEADER------------- */
 
+.header {
+  border: 1px solid #ececec;
+  background-color: var(--main-title-color);
+}
+
 .header-nav {
   display: flex;
   margin-right: auto;
@@ -66,22 +71,11 @@ img {
   align-items: center;
 }
 
-.header {
-  border: 1px solid #ececec;
-  background-color: var(--main-title-color);
-}
-
 .list {
   list-style: none;
   padding: 0px;
   margin: 0px;
   display: flex;
-}
-.header-item {
-  margin-right: 50px;
-}
-.header-nav .iteam + .iteam {
-  margin-left: 50px;
 }
 
 /* .header-nav .item:(:last-child){
@@ -124,7 +118,19 @@ img {
   margin-right: auto;
   transition: color var(--timing-function);
 }
-
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+.header-item {
+  margin-right: 50px;
+}
+.header-nav .iteam + .iteam {
+  margin-left: 50px;
+}
+.header-item {
+  position: relative;
+}
 .header-item-tel {
   font-weight: 500;
   font-size: 14px;
@@ -135,27 +141,23 @@ img {
 .header-contact-link {
   display: flex;
   align-items: center;
-
   font-weight: 500;
   padding: 32px 0;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--third-title-color);
-  transition: opacity var(--timing-function);
+  transition: color var(--timing-function);
 }
-
-.nav-link:hover,
-.nav-link:focus {
+.header-contact-link:hover,
+.header-contact-link:focus {
   color: var(--accent-color);
 }
+
 .current {
   color: var(--accent-color);
 }
 
-.header-item {
-  position: relative;
-}
 .current::after {
   content: '';
   display: block;
@@ -165,13 +167,6 @@ img {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
-}
-.header-contact-link {
-  transition: color var(--timing-function);
-}
-.header-contact-link:hover,
-.header-contact-link:focus {
-  color: var(--accent-color);
 }
 
 .icon-mail,
@@ -202,24 +197,6 @@ img {
   background-position: center;
 }
 
-.porfolio {
-  background: var(--main-title-color);
-  padding: 20px;
-}
-.works-title,
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  overflow: hidden;
-}
-
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -233,6 +210,7 @@ img {
   margin-right: auto;
   width: 696px;
 }
+
 .hero-btn {
   background-color: var(--accent-color);
   border-radius: 4px;
@@ -242,7 +220,14 @@ img {
   margin: 0 auto;
   display: block;
   transition: background-color var(--timing-function);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--btn-color);
 }
+
 .hero-btn:focus,
 .hero-btn:hover {
   background-color: var(--btn-hover);
@@ -289,6 +274,7 @@ li > .all {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .btn-current {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -299,17 +285,25 @@ li > .all {
   color: var(--main-title-color);
 }
 
-.hero-btn {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: var(--btn-color);
-}
-
 /* portfolio projects */
 
+.porfolio {
+  background: var(--main-title-color);
+  padding: 20px;
+}
+.works-title,
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  overflow: hidden;
+}
 .project-item {
   background-color: var(--main-title-color);
   flex-basis: calc(100% / 3 - 30px);
@@ -320,6 +314,9 @@ li > .all {
   display: block;
   text-decoration: none;
   transition: box-shadow var(--timing-function);
+}
+.project-link:hover .box-overlay {
+  transform: translateY(0);
 }
 .portfolio-top-wrap {
   position: relative;
@@ -340,9 +337,6 @@ li > .all {
   transition: transform var(--timing-function);
 }
 
-.project-link:hover .box-overlay {
-  transform: translateY(0);
-}
 .porfolio-top-text {
   font-size: 18px;
   line-height: 1.56;
@@ -376,7 +370,6 @@ li > .all {
   font-size: 18px;
   line-height: 2;
   color: var(--forth-title-color);
-
   letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
@@ -450,7 +443,6 @@ li > .all {
 .about-item:not(:last-child) {
   margin-right: 30px;
 }
-
 .about-list {
   list-style: none;
   display: flex;
@@ -670,6 +662,9 @@ li > .all {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
+}
+
+.contacts-item:hover .contacts-item:focus {
   transition: opasity var(--timing-function);
 }
 
@@ -711,7 +706,6 @@ li > .all {
   border-radius: 50%;
   width: 44px;
   height: 44px;
-  margin-right: 10px;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color var(--timing-function);
 }
