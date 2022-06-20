@@ -159,7 +159,6 @@ img {
 .current {
   color: var(--accent-color);
 }
-
 .current::after {
   content: '';
   display: block;
