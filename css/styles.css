@@ -37,7 +37,9 @@ body {
   font-style: normal;
   font-size: 14px;
 }
-
+.list-style {
+  list-style-type: none;
+}
 .container {
   width: 1200px;
   margin-left: auto;
@@ -584,20 +586,21 @@ li > .all {
   margin-right: 30px;
 }
 .clients-link {
-  color: var(--btn-soc);
   border: 1px solid var(--btn-soc);
   border-radius: 4px;
   padding: 16px 32px;
-  transition: color var(--timing-function);
-  border-color: var(--timing-function);
+  transition: border-color var(--timing-function);
 }
 .clients-icon {
-  fill: currentColor;
+  fill: rgba(175, 177, 184, 1);
+  transition: fill var(--timing-function);
 }
 .clients-link:hover,
-.clients-link:focus {
+.clients-link:focus,
+.clients-link:hover .clients-icon,
+.clients-item:focus .clients-icon {
   border-color: var(--accent-color);
-  color: var(--timing-function);
+  fill: var(--accent-color);
 }
 
 /* -------------FOOTER----------------- */
@@ -639,7 +642,7 @@ li > .all {
   margin-bottom: 20px;
   transition: color var(--timing-function);
 }
-.contacts-item {
+.adress-contacts {
   list-style: none;
   text-decoration: none;
   font-size: 14px;
@@ -648,13 +651,12 @@ li > .all {
   color: var(--main-title-color);
 }
 
-.contacts-item:hover,
-.contacts-item:focus {
-  color: var(--accent-color);
-}
-
 .contacts-item:not(:last-child) {
   margin-bottom: 9px;
+}
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
 }
 
 .contacts-link {
